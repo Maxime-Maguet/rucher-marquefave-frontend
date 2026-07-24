@@ -2,7 +2,7 @@
 
 Interface web & boutique e-commerce artisanale pour **Le Rucher de Marquefave** (Saint-Sulpice-la-Pointe).
 
-Conçue avec **Next.js 15**, **Tailwind CSS v4** et une charte graphique sur-mesure privilégiant la sérénité, le terroir et la mise en valeur des produits de la ruche.
+Conçue avec **Next.js 16**, **Tailwind CSS v4** et une charte graphique sur-mesure privilégiant la sérénité, le terroir et la mise en valeur des produits de la ruche.
 
 ---
 
@@ -31,7 +31,7 @@ Développement d'un frontend moderne, rapide, accessible et optimisé pour le r�
 
 ### 🟢 Phase 1 : Design System & Layout Base
 
-- [x] Initialisation Next.js 15 & TypeScript
+- [x] Initialisation Next.js 16 & TypeScript
 - [x] Configuration des Design Tokens (Tailwind CSS v4 & `globals.css`)
 - [x] Importation & association des typographies (`Fraunces` & `Manrope`)
 - [ ] Création du composant Navigation (`Header` / Navbar) & Pied de page (`Footer`)
