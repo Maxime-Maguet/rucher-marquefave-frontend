@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍯 Le Rucher de Marquefave - Frontend (Next.js)
 
-## Getting Started
+Interface web & boutique e-commerce artisanale pour **Le Rucher de Marquefave** (Saint-Sulpice-la-Pointe).
 
-First, run the development server:
+Conçue avec **Next.js 15**, **Tailwind CSS v4** et une charte graphique sur-mesure privilégiant la sérénité, le terroir et la mise en valeur des produits de la ruche.
+
+---
+
+## 🎯 Vision du Projet & Expérience Client (V1)
+
+Développement d'un frontend moderne, rapide, accessible et optimisé pour le référencement (SEO) local.
+
+- **Parcours d'Achat :** Catalogue interactif, fiche produit détaillée et tunnel de commande optimisé pour le Click & Collect (retrait au rucher & marchés locaux).
+- **Paiement Fluide :** Redirection sécurisée via Stripe Checkout & confirmation de commande.
+- **Identité Forte :** Respect des Design Tokens (palette de couleurs douces, typographies `Fraunces` & `Manrope`, icônes contourées).
+
+---
+
+## 🛠️ Stack Technique
+
+- **Framework :** Next.js 16 (App Router, Server & Client Components)
+- **Langage :** TypeScript
+- **Styling :** Tailwind CSS v4 (Configuration centralisée via `@theme` dans CSS)
+- **Typographies :** Google Fonts (`Fraunces` pour les titres, `Manrope` pour le texte courant via `next/font`)
+- **Iconographie :** `@tabler/icons-react` (style outline uniquement)
+- **Gestion d'État / API :** React Hooks & Fetch API (connexion avec l'API Backend NestJS)
+
+---
+
+## 📋 Roadmap / Kanban V1
+
+### 🟢 Phase 1 : Design System & Layout Base
+
+- [x] Initialisation Next.js 15 & TypeScript
+- [x] Configuration des Design Tokens (Tailwind CSS v4 & `globals.css`)
+- [x] Importation & association des typographies (`Fraunces` & `Manrope`)
+- [ ] Création du composant Navigation (`Header` / Navbar) & Pied de page (`Footer`)
+
+### 🟡 Phase 2 : Vitrine & Catalogue Produits
+
+- [ ] Page d'accueil (`/`) : Hero section, histoire du rucher, engagement apicole
+- [ ] Grille de produits (`/produits`) : Affichage des miels et déclinaisons de pots
+- [ ] Fiche produit (`/produits/[slug]`) : Photos réelles, descriptif gustatif, choix du conditionnement
+- [ ] Intégration de l'API Backend (`GET /products` et `GET /products/:slug`)
+
+### 🟠 Phase 3 : Panier & Tunnel de Commande (Click & Collect)
+
+- [ ] Composant Panier (Drawer / Modal ou page dédiée `/panier`)
+- [ ] Formulaire d'information client & Choix du créneau/lieu de retrait (Click & Collect)
+- [ ] Connexion API Checkout (`POST /orders/checkout`) & Redirection Stripe Checkout
+- [ ] Page de confirmation de commande (`/commande/confirmation`)
+
+### 🔴 Phase 4 : Peaufinage, SEO & Accessibilité
+
+- [ ] Optimisation des performances & Images (`next/image`)
+- [ ] Métadonnées OpenGraph, favicon & SEO local (Saint-Sulpice-la-Pointe)
+- [ ] Animations douces (transitions au survol, états de chargement / Skeleton)
+
+---
+
+## 🎨 Charte Visuelle & Design Tokens
+
+L'intégralité du système de design (couleurs `cream`, `honey`, `sage`, `bark`, typographies et arrondis) est documentée dans le fichier **[`DESIGN_TOKENS.md`](./DESIGN_TOKENS.md)** à la racine du projet.
+
+---
+
+## 🚀 Installation & Démarrage
+
+### Démarrage du serveur de développement
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# 1. Installer les dépendances
+$ npm install
+
+# 2. Lancer le serveur de dev
+$ npm run dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
