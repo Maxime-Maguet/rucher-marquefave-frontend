@@ -34,7 +34,7 @@ Développement d'un frontend moderne, rapide, accessible et optimisé pour le r�
 - [x] Initialisation Next.js 16 & TypeScript
 - [x] Configuration des Design Tokens (Tailwind CSS v4 & `globals.css`)
 - [x] Importation & association des typographies (`Fraunces` & `Manrope`)
-- [ ] Création du composant Navigation (`Header` / Navbar) & Pied de page (`Footer`)
+- [x] Création du composant Navigation (`Header` / Navbar) & Pied de page (`Footer`)
 
 ### 🟡 Phase 2 : Vitrine & Catalogue Produits
 

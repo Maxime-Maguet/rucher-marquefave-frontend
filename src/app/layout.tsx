@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Manrope } from "next/font/google";
+import Footer from "@/components/sections/Footer";
+import Header from "@/components/sections/Header";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -27,7 +29,9 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${fraunces.variable} ${manrope.variable}`}>
       <body className="bg-cream text-bark font-sans antialiased">
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
