@@ -27,6 +27,19 @@ Développement d'un frontend moderne, rapide, accessible et optimisé pour le r�
 
 ---
 
+## 📋 Conception (Notion)
+
+Dossier projet (page privée + sous-pages) : [Le Rucher de Marquefave](https://app.notion.com/p/3ddf0b0f54988188aae1ed717cdc3fca)
+
+- [Pages et routes](https://app.notion.com/p/3ddf0b0f5498812b891ad2769a2c629a)
+- [Composants](https://app.notion.com/p/3ddf0b0f549881b29f25fc0324ad4795)
+- [Roadmap V1](https://app.notion.com/p/3ddf0b0f5498810b9e30c39dba7b3d20)
+- [Hors V1](https://app.notion.com/p/3ddf0b0f54988148aa59e09e32a93fc6)
+
+Convention App Router : `src/app/` = URLs ; `src/components/` = UI réutilisable. Le Header pointe vers `/nos-miels` via `Link`, il n’importe pas la page. La liste des miels vit dans `app/nos-miels/page.tsx` (pas de composant `Products`).
+
+---
+
 ## 📋 Roadmap / Kanban V1
 
 ### 🟢 Phase 1 : Design System & Layout Base
@@ -34,27 +47,40 @@ Développement d'un frontend moderne, rapide, accessible et optimisé pour le r�
 - [x] Initialisation Next.js 16 & TypeScript
 - [x] Configuration des Design Tokens (Tailwind CSS v4 & `globals.css`)
 - [x] Importation & association des typographies (`Fraunces` & `Manrope`)
-- [x] Création du composant Navigation (`Header` / Navbar) & Pied de page (`Footer`)
+- [x] Header & Footer dans le layout racine
+- [x] Fichiers spéciaux : `loading.tsx`, `error.tsx`, `not-found.tsx`
+- [x] Routes vides : `app/nos-miels/page.tsx` et `app/nos-miels/[slug]/page.tsx`
+- [x] Suppression du composant `Products` (catalogue = page `/nos-miels`)
 
-### 🟡 Phase 2 : Vitrine & Catalogue Produits
+### 🟡 Phase 2 : Vitrine & Catalogue
 
-- [ ] Page d'accueil (`/`) : Hero section, histoire du rucher, engagement apicole
-- [ ] Grille de produits (`/produits`) : Affichage des miels et déclinaisons de pots
-- [ ] Fiche produit (`/produits/[slug]`) : Photos réelles, descriptif gustatif, choix du conditionnement
-- [ ] Intégration de l'API Backend (`GET /products` et `GET /products/:slug`)
+- [ ] Accueil (`/`) : Hero, miels mis en avant, histoire, engagement
+- [ ] Page `/le-rucher`
+- [ ] Page `/contact`
+- [ ] Catalogue `/nos-miels` : `MielsGrid` / `MielCard`
+- [ ] Fiche `/nos-miels/[slug]` : galerie, infos, sélecteur de pot (`VariantSelector`)
+- [ ] API `GET /products` et `GET /products/:slug` (fiche par **slug**)
+- [ ] `nos-miels/loading.tsx` (skeleton catalogue)
 
 ### 🟠 Phase 3 : Panier & Tunnel de Commande (Click & Collect)
 
-- [ ] Composant Panier (Drawer / Modal ou page dédiée `/panier`)
-- [ ] Formulaire d'information client & Choix du créneau/lieu de retrait (Click & Collect)
-- [ ] Connexion API Checkout (`POST /orders/checkout`) & Redirection Stripe Checkout
-- [ ] Page de confirmation de commande (`/commande/confirmation`)
+- [ ] Panier : tiroir **ou** page `/panier` (un seul pattern)
+- [ ] Compteur d’articles dans le Header
+- [ ] Page `/commande` : formulaire client + lieu / créneau de retrait
+- [ ] API `POST /orders/checkout` & redirection Stripe Checkout
+- [ ] `/commande/confirmation`
+- [ ] `/commande/annulee` (abandon Stripe)
 
 ### 🔴 Phase 4 : Peaufinage, SEO & Accessibilité
 
-- [ ] Optimisation des performances & Images (`next/image`)
+- [ ] Images via `next/image`
 - [ ] Métadonnées OpenGraph, favicon & SEO local (Saint-Sulpice-la-Pointe)
-- [ ] Animations douces (transitions au survol, états de chargement / Skeleton)
+- [ ] Animations douces, skeletons
+- [ ] Pages légales avant mise en ligne paiement (`/mentions-legales`, `/cgv`)
+
+### Hors V1 (ne pas ouvrir maintenant)
+
+Admin front, compte client, livraison domicile, `proxy.ts`, groupes de routes. Détail : [Hors V1](https://app.notion.com/p/3ddf0b0f54988148aa59e09e32a93fc6).
 
 ---
 
