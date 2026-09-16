@@ -27,20 +27,10 @@ Développement d'un frontend moderne, rapide, accessible et optimisé pour le r�
 
 ---
 
-## 📋 Conception (Notion)
-
-Dossier projet (page privée + sous-pages) : [Le Rucher de Marquefave](https://app.notion.com/p/3ddf0b0f54988188aae1ed717cdc3fca)
-
-- [Pages et routes](https://app.notion.com/p/3ddf0b0f5498812b891ad2769a2c629a)
-- [Composants](https://app.notion.com/p/3ddf0b0f549881b29f25fc0324ad4795)
-- [Roadmap V1](https://app.notion.com/p/3ddf0b0f5498810b9e30c39dba7b3d20)
-- [Hors V1](https://app.notion.com/p/3ddf0b0f54988148aa59e09e32a93fc6)
+## 📋 Roadmap / Kanban V1
 
 Convention App Router : `src/app/` = URLs ; `src/components/` = UI réutilisable. Le Header pointe vers `/nos-miels` via `Link`, il n’importe pas la page. La liste des miels vit dans `app/nos-miels/page.tsx` (pas de composant `Products`).
 
----
-
-## 📋 Roadmap / Kanban V1
 
 ### 🟢 Phase 1 : Design System & Layout Base
 
@@ -80,7 +70,7 @@ Convention App Router : `src/app/` = URLs ; `src/components/` = UI réutilisable
 
 ### Hors V1 (ne pas ouvrir maintenant)
 
-Admin front, compte client, livraison domicile, `proxy.ts`, groupes de routes. Détail : [Hors V1](https://app.notion.com/p/3ddf0b0f54988148aa59e09e32a93fc6).
+Admin front, compte client, livraison domicile, `proxy.ts`, groupes de routes.
 
 ---
 
