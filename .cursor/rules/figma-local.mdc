@@ -1,0 +1,20 @@
+---
+description: Use the local Figma desktop MCP in a local Cursor Agent, never a Cloud Agent
+alwaysApply: true
+---
+
+# Figma en local uniquement
+
+Ce projet se connecte à Figma via le **serveur MCP desktop** (`figma-desktop` → `http://127.0.0.1:3845/mcp`), pas via le MCP distant `https://mcp.figma.com/mcp`.
+
+## Prérequis
+
+- Travailler dans un **Agent local** (Cursor Desktop, sélecteur **This Computer** / **Local**). Un Cloud Agent ne peut pas joindre `127.0.0.1` sur la machine de l’utilisateur.
+- L’app **Figma desktop** doit rester ouverte, avec un fichier Design ouvert et le **desktop MCP server** activé (Dev Mode / Shift+D → Enable desktop MCP server).
+- Si les outils `figma-desktop` sont absents, ne pas authentifier le MCP Figma cloud. Indiquer de relancer un chat Agent **local**.
+
+## Outils
+
+- Préférer les outils du serveur `figma-desktop`.
+- Ne pas appeler `mcp_auth` sur le MCP Figma distant, sauf demande explicite de l’utilisateur.
+- Pour implémenter un écran : sélection Figma ou URL `figma.com/design/...`, puis `get_design_context` / `get_screenshot`.
