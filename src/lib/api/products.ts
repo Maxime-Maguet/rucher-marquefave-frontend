@@ -15,8 +15,8 @@ export const getProducts = async (): Promise<Product[]> => {
   return products;
 };
 
-export const getProduct = async (id: string): Promise<Product> => {
-  const response = await fetch(`${process.env.API_URL}/products/${id}`);
+export const getProduct = async (slug: string): Promise<Product> => {
+  const response = await fetch(`${process.env.API_URL}/products/${slug}`);
   if (!response.ok) {
     throw new Error("Failed to fetch product");
   }

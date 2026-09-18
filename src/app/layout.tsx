@@ -28,9 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${fraunces.variable} ${manrope.variable}`}>
-      <body className="bg-cream text-bark font-sans antialiased">
+      <body className="bg-cream text-bark font-sans antialiased min-h-svh flex flex-col">
         <Header />
-        {children}
+        <div className="flex-1">{children}</div>
         <Footer />
       </body>
     </html>

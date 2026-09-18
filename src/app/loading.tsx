@@ -1,7 +1,7 @@
 // Server Component — no parameters accepted by Next.js loading convention
 export default function Loading() {
   return (
-    <main>
+    <main className="pt-20">
       <section
         role="status"
         aria-live="polite"
