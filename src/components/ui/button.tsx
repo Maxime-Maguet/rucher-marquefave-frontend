@@ -3,18 +3,16 @@ import Link from "next/link";
 
 type ButtonProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
-export default function Button({ children }: ButtonProps) {
+export default function Button({ children, className }: ButtonProps) {
   return (
-    <Link href="/">
-      <button
-        type="button"
-        className="bg-honey text-cream px-4 py-2 rounded-pill hover:bg-honey-light cursor-pointer hover:text-honey focus:visible:bg-honey-light focus:visible:text-honey transition-all duration-300
-      "
-      >
-        {children}
-      </button>
+    <Link
+      href="/"
+      className={`bg-honey text-cream px-4 py-2 rounded-pill font-sans font-medium cursor-pointer hover:bg-bark focus-visible:bg-bark transition-colors duration-300 motion-reduce:transition-none ${className}`}
+    >
+      {children}
     </Link>
   );
 }
